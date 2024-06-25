@@ -1,0 +1,172 @@
+/*Freeepink
+Unsplash, páginas para descargar imagenes sin copyright*/ 
+
+/*General en toda la página*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+body{
+    background-color: white; /*Aunque está predispuesto para que sea en blanco, es mejor especificarlo en caso de que algún dispositivo esté en modo obscuro*/
+    font-family: sans-serif;
+    font-weight: bold; /*En negritas*/
+}
+
+
+
+header nav{
+    display: flex; /*Pantalla flexible, modelo, tipo cajita, facilita su alineación y distribución*/
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 98vw; /*Viewport widh, el ancho de la ventana del navegador debe de ser del 98%*/
+    height: 80px;
+    font-size: 16px;
+    padding: 0px 16px;
+    position: fixed;  /*la barrita del navegador va a permanecer fija incluso cuando se haga pequeña*/
+    z-index: 1; /*la barrita del navegador se mantiene fija, se sobrepone aunque vayamos bajando*/
+    background-color: white;
+}
+header nav img#pinterest-icon{
+    width: 40px;
+    height: 40px;
+    padding: 3px;
+}
+header nav img#pinterest-icon:hover{  /*queda sombreado el ícono cuando colocamos el cursor*/
+    background-color: #E9E9E9;
+    border-radius: 150px;   /*redondea los bordes y lo deja como un circulito*/
+}
+
+
+
+.first-list{
+    display: flex; /*los coloca en horizontal*/
+}
+.first-list a{
+   text-decoration: none; /*desaparece el subrayado del hipervínculo*/ 
+   color: black;
+}
+.first-list li{ /*quita las viñetas*/ 
+    list-style: none;
+    padding: 0px 12px;
+}
+.first-list li #Inicio{
+    background-color: black;
+    color: white;
+    padding: 14px 12px;
+    border-radius: 25px; /*Redondeamos los bordes*/ 
+}
+.search{
+    flex-grow: 1; 
+    height: 48px;
+    background-color: #E9E9E9;
+    border-radius: 25px; 
+}
+.search:hover{
+    background-color: #e1e1e1; /*Cambia de color cuando colocamos el cursor*/ 
+}
+.search:focus-within{
+    border: 4px solid #7fc1ff; /*Se pone de color azul el borde cuando le damos clic en buscar*/ 
+}
+.barra{
+    display: flex; /*Coloca en horizontal la lupa y el apartado de búsqueda*/ 
+    align-items: center;
+    height: 48px;
+}
+.barra input{
+    border: none; /*quitamos el borde de la palabra buscar*/
+    outline: none; /*antes al darle clic volvía a aparecer el borde, ahora ya no*/
+    background-color: inherit; /*Toma el color de fondo del elemento que está detrás de él, o sea, se vuelve transparente*/
+    padding: 0px 5px 0px 0px;
+    font-size: 16px;
+    flex-grow: 1; /*Abarca todo el espacio disponible, es decir, si agregamos más íconos a la derecha o a la izquierda, en ancho de la barra se va a ajustar en automático*/
+}
+#lupa{
+    padding: 13px;
+    color: #767676;
+    font-size: 20px; /*Tamaño de la lupa*/ 
+    font-weight: bolder; /*En negritas*/ 
+}
+.right-items span{
+    padding: 8px; /*Separación entre todos los elementos de tipo span*/ 
+    color: #767676;
+    font-size: 28px; 
+}
+.right-items span:hover{
+    background-color: #e9e9e9;
+    border-radius: 150px;
+    cursor: pointer; /*Cuando colocamos nuestro cursor, cambia como si fuera un hipervínculo, a pesar de no serlo*/ 
+}
+
+/*Estilos para las cards*/ 
+.contenido{
+    position: absolute;
+    margin-top: 80px;
+    padding-right: 5px;
+}
+.imagenes{
+    columns: 5 240px; /*Crea 5 columnas, cada una con un ancho de 240 pixeles*/
+    margin:auto;
+}
+.imagenes .card-image{
+    position: relative;
+    padding: 6px;
+}
+.imagenes .card-image img{
+    border-radius: 15px;
+    min-width: 240px; /*Ajustamos para que el ancho mínimo y máximo de toodas las imagenes sea 240 px, NO OTRO*/
+    max-width: 240px;
+}
+.card-image:hover > :first-child{
+    filter: brightness(60%); /*Indica que la imagen se va a obscurecer al 60% de su brillo original*/
+}
+.card-image:hover > *{  /*Los iconos de las cards será visibles si colocamos nuestro cursor en ellas*/
+    visibility: visible;
+    display: inline;
+}
+.button{
+    position: absolute; /*Acomodamos el btón de guardar para que quede en la parte de arriba*/
+    left: 50%;
+    top: 5%; /*Porcentaje del card de donde se encuentran*/
+    padding: 13px 15px;
+    background-color: #e60023;
+    border-radius: 30px;
+    border: none;
+    visibility: hidden;
+    display:none;
+}
+.imagenes .card-image button a{ /*Quitamos el hipevínculo de guardar, y le damos forma al botón de guardado*/
+    text-decoration: none; 
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+.oculto-1{ /*Ícono de Upload*/
+    position: absolute;
+    left: 60%;
+    bottom: 8%;
+    background-color: white;
+    font-size: 30px;
+    border-radius: 50px;
+    color: black; /*Enfatizamos que son negros los íconos*/
+    font-weight: bold;
+    padding: 4px;
+    visibility: hidden;
+    display: none;
+}
+.oculto-2{ /*Ícono de More*/
+    position: absolute;
+    left: 78%;
+    bottom: 8%;
+    background-color: white;
+    font-size: 30px;
+    border-radius: 50px;
+    color: black; 
+    font-weight: bold;
+    padding: 4px;
+    visibility: hidden;
+    display: none;
+}
