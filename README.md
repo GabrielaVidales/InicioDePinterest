@@ -2,7 +2,7 @@
 Programa desarrollado durante la 3ra semana del bootcamp:  _[Tecnochichas PRO (TecPro) 2024](https://tecnolochicas.mx/)_, utilizando **HTML,** **CSS3** y **Google Fonts**. Enfocada principalmente en replicar la apariencia visual y dinámicade la página, ofreciencia una expericencia similar e intuitiva al momento de navegar. 
 
 ## Vista previa del proyecto
-![Demo](/imagenes/VistaPrevia.jpg)
+![Demo](/imagenes/VistaPrevia.png)
 
 _Link de la página:_ [https://inicio-de-pinterest-9d72.vercel.app/](https://inicio-de-pinterest-9d72.vercel.app/)
 
