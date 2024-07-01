@@ -4,6 +4,8 @@ Programa desarrollado durante la 3ra semana del bootcamp:  _[Tecnochichas PRO (T
 ## Vista previa del proyecto
 ![Demo](/imagenes/VistaPrevia.jpg)
 
+_Link de la página:_[[https://tecnolochicas.mx/](https://inicio-de-pinterest-9d72.vercel.app/)](https://inicio-de-pinterest-9d72.vercel.app/)
+
 ### Algunos de los elementos  usados
 * Botones y enlaces
 * Biblioteca de íconos de Material Design
